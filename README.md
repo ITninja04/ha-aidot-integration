@@ -67,6 +67,10 @@ for lint, format and tests together.
 `scripts/dump_devices.py` prints what the AiDot cloud says about each of your
 lights, with keys and passwords removed, which is the first thing to look at
 when a light shows the wrong controls.
+`scripts/channel_walk.py` drives the A001818 strip through red, green, blue
+and white one at a time over its local connection, shows what the strip
+reports back for each, and asks what you see. It puts the strip back as it
+was when it ends.
 
 ## License
 

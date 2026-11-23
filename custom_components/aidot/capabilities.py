@@ -67,7 +67,10 @@ KNOWN_MODELS: dict[str, ColorProfile] = {
     # record lists only control.light.rgbw, which cannot tell RGB from RGBW
     # (record saved in tests/fixtures/lk_a001818.json). Ozzie reported on
     # 2026-11-23 that the strip is RGB only and the white and color
-    # temperature controls cause problems.
+    # temperature controls cause problems. Confirmed the same day with
+    # scripts/channel_walk.py: red, green and blue alone each lit and the
+    # strip reported them back; white alone (0x000000FF) got no report, the
+    # strip stayed blue, and Ozzie saw no white.
     "LK.light.A001818": ColorProfile.RGB,
 }
 
