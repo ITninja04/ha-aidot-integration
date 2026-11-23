@@ -1,0 +1,677 @@
+{
+ "id": "strip-a001818",
+ "modelId": "LK.light.A001818",
+ "name": "Living Accent Lights",
+ "type": "light",
+ "mac": "aa:bb:cc:00:00:01",
+ "hardwareVersion": null,
+ "aesKey": [
+  "0123456789abcdef"
+ ],
+ "product": {
+  "id": "1849284714749952002",
+  "modelId": "LK.light.A001818",
+  "name": "Smart Light Strip-10ft",
+  "type": "light",
+  "typeId": "-1003",
+  "categoryId": "3",
+  "thingVersion": "1.0.0",
+  "serviceModules": [
+   {
+    "identity": "control.light.effect.mode",
+    "properties": [
+     {
+      "identity": "EffectMode",
+      "code": "EffectMode",
+      "name": "EffectMode",
+      "description": "light effect\uff0820\u4e2a\u9ed8\u8ba4\u706f\u6548\uff0c\u5982\u4e0d\u9700\u8981\u914d\u7f6e\u4ea7\u54c1\u7684\u65f6\u5019\u9009\u62e9\u6027\u4fdd\u7559\u5373\u53ef\uff09",
+      "rwStatus": "RU",
+      "valueType": "enum",
+      "ifttt": [
+       "then"
+      ],
+      "allowedValues": [
+       {
+        "name": "Sunset",
+        "description": "sunset",
+        "value": 0
+       },
+       {
+        "name": "Wake up",
+        "description": "wakeUp",
+        "value": 1
+       },
+       {
+        "name": "Focus on",
+        "description": "focusOn",
+        "value": 2
+       },
+       {
+        "name": "Family",
+        "description": "family",
+        "value": 3
+       },
+       {
+        "name": "emotion",
+        "description": "emotion",
+        "value": 4
+       },
+       {
+        "name": "Party",
+        "description": "party",
+        "value": 5
+       },
+       {
+        "name": "TV",
+        "description": "tv",
+        "value": 6
+       },
+       {
+        "name": "Reading",
+        "description": "reading",
+        "value": 7
+       },
+       {
+        "name": "Sleeping",
+        "description": "sleeping",
+        "value": 8
+       },
+       {
+        "name": "Night light",
+        "description": "nightLight",
+        "value": 9
+       },
+       {
+        "name": "Bonfire",
+        "description": "bonfire",
+        "value": 10
+       },
+       {
+        "name": "Spring",
+        "description": "spring",
+        "value": 26
+       },
+       {
+        "name": "Summer",
+        "description": "summer",
+        "value": 27
+       },
+       {
+        "name": "Fall",
+        "description": "fall",
+        "value": 28
+       },
+       {
+        "name": "Winter",
+        "description": "winter",
+        "value": 29
+       },
+       {
+        "name": "Spring Blossom",
+        "description": "springBlossom",
+        "value": 30
+       },
+       {
+        "name": "Christmas",
+        "description": "christmas",
+        "value": 31
+       },
+       {
+        "name": "Relax",
+        "description": "relax",
+        "value": 32
+       },
+       {
+        "name": "Cozy",
+        "description": "cosy",
+        "value": 33
+       },
+       {
+        "name": "Cozy Halloween",
+        "description": "cosyHalloween",
+        "value": 34
+       }
+      ],
+      "maxValue": "",
+      "minValue": "",
+      "step": null,
+      "dpId": 96,
+      "defaultValue": "",
+      "unit": "-",
+      "observable": true,
+      "writeOnly": false,
+      "readOnly": true,
+      "paramValueType": 1
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.light.dimming",
+    "properties": [
+     {
+      "identity": "Dimming",
+      "code": "Dimming",
+      "name": "Dimming",
+      "description": "Level\uff0c0% - 100%",
+      "rwStatus": "RWU",
+      "valueType": "int",
+      "ifttt": [
+       "then"
+      ],
+      "allowedValues": [],
+      "maxValue": "100",
+      "minValue": "1",
+      "step": "1",
+      "dpId": 39,
+      "defaultValue": "100",
+      "unit": "-",
+      "observable": true,
+      "writeOnly": true,
+      "readOnly": true,
+      "paramValueType": null
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.light.rhythmMode",
+    "properties": [
+     {
+      "identity": "rhythmMode",
+      "code": "rhythmMode",
+      "name": "rhythmMode",
+      "description": "\u5f8b\u52a8\u6a21\u5f0f",
+      "rwStatus": "R",
+      "valueType": "enum",
+      "ifttt": [],
+      "allowedValues": [
+       {
+        "name": "Party",
+        "description": "",
+        "value": "0"
+       },
+       {
+        "name": "Dynamic",
+        "description": "",
+        "value": "1"
+       },
+       {
+        "name": "Calm",
+        "description": "",
+        "value": "2"
+       },
+       {
+        "name": "Auto",
+        "description": "",
+        "value": "3"
+       }
+      ],
+      "maxValue": "",
+      "minValue": "",
+      "step": null,
+      "dpId": 423,
+      "defaultValue": "",
+      "unit": "-",
+      "observable": false,
+      "writeOnly": false,
+      "readOnly": true,
+      "paramValueType": 0
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.onoff",
+    "properties": [
+     {
+      "identity": "OnOff",
+      "code": "OnOff",
+      "name": "OnOff",
+      "description": "0 = Off\uff0c1 = On",
+      "rwStatus": "RWU",
+      "valueType": "bool",
+      "ifttt": [
+       "if"
+      ],
+      "allowedValues": [
+       {
+        "name": "On",
+        "description": "truned on",
+        "value": "1"
+       },
+       {
+        "name": "Off",
+        "description": "truned off",
+        "value": "0"
+       }
+      ],
+      "maxValue": "",
+      "minValue": "",
+      "step": null,
+      "dpId": 40,
+      "defaultValue": "1",
+      "unit": "-",
+      "observable": true,
+      "writeOnly": true,
+      "readOnly": true,
+      "paramValueType": null
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.light.rhythmEnable",
+    "properties": [
+     {
+      "identity": "rhythmEnable",
+      "code": "rhythmEnable",
+      "name": "rhythmEnable",
+      "description": "\u4f7f\u80fdMIC\uff0c\u6839\u636e\u97f3\u4e50\u5f8b\u52a8",
+      "rwStatus": "R",
+      "valueType": "bool",
+      "ifttt": [],
+      "allowedValues": [
+       {
+        "name": "Disable",
+        "description": "",
+        "value": 0
+       },
+       {
+        "name": "Enable",
+        "description": "",
+        "value": 1
+       }
+      ],
+      "maxValue": "",
+      "minValue": "",
+      "step": null,
+      "dpId": 426,
+      "defaultValue": "1",
+      "unit": "-",
+      "observable": false,
+      "writeOnly": false,
+      "readOnly": true,
+      "paramValueType": 1
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.light.rgbw",
+    "properties": [
+     {
+      "identity": "RGBW",
+      "code": "RGBW",
+      "name": "RGBW",
+      "description": "\u989c\u8272\u63a7\u5236",
+      "rwStatus": "RWU",
+      "valueType": "int",
+      "ifttt": [
+       "then"
+      ],
+      "allowedValues": [],
+      "maxValue": "2139095040",
+      "minValue": "-2147450880",
+      "step": "1",
+      "dpId": 86,
+      "defaultValue": "-224833024",
+      "unit": "-",
+      "observable": true,
+      "writeOnly": true,
+      "readOnly": true,
+      "paramValueType": null
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.light.segmentEnable",
+    "properties": [
+     {
+      "identity": "segmentEnable",
+      "code": "segmentEnable",
+      "name": "segmentEnable",
+      "description": "\u706f\u7684\u5206\u6bb5\u6a21\u5f0f\u4f7f\u80fd",
+      "rwStatus": "R",
+      "valueType": "bool",
+      "ifttt": [],
+      "allowedValues": [
+       {
+        "name": "Disable",
+        "description": "",
+        "value": 0
+       },
+       {
+        "name": "Enable",
+        "description": "",
+        "value": 1
+       }
+      ],
+      "maxValue": "",
+      "minValue": "",
+      "step": null,
+      "dpId": 437,
+      "defaultValue": "0",
+      "unit": "-",
+      "observable": false,
+      "writeOnly": false,
+      "readOnly": true,
+      "paramValueType": 1
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.counter.enable",
+    "properties": [
+     {
+      "identity": "CountDownEnable",
+      "code": "CountDownEnable",
+      "name": "\u5012\u8ba1\u65f6\u4f7f\u80fd",
+      "description": "\u5012\u8ba1\u65f6\u4f7f\u80fd\u2014\u2014\u52ff\u5220",
+      "rwStatus": "RWU",
+      "valueType": "bool",
+      "ifttt": [],
+      "allowedValues": [
+       {
+        "name": "Enable",
+        "description": "Enable",
+        "value": "1"
+       },
+       {
+        "name": "Disable",
+        "description": "Disable",
+        "value": "0"
+       }
+      ],
+      "maxValue": "",
+      "minValue": "",
+      "step": null,
+      "dpId": 52,
+      "defaultValue": "0",
+      "unit": "-",
+      "observable": true,
+      "writeOnly": true,
+      "readOnly": true,
+      "paramValueType": null
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.light.rhythmRGB",
+    "properties": [
+     {
+      "identity": "rhythmRGB",
+      "code": "rhythmRGB",
+      "name": "rhythmRGB",
+      "description": "\u672c\u5730\u5f8b\u52a8\u7684\u56fa\u5b9a\u8272\u76d8\u8bbe\u7f6e",
+      "rwStatus": "R",
+      "valueType": "int",
+      "ifttt": [],
+      "allowedValues": [],
+      "maxValue": "2139095040",
+      "minValue": "-2147450880",
+      "step": "1",
+      "dpId": 436,
+      "defaultValue": "-1",
+      "unit": "-",
+      "observable": false,
+      "writeOnly": false,
+      "readOnly": true,
+      "paramValueType": 1
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.light.rhythmMicSensitivity",
+    "properties": [
+     {
+      "identity": "rhythmMicSensitivity",
+      "code": "rhythmMicSensitivity",
+      "name": "rhythmMicSensitivity",
+      "description": "1",
+      "rwStatus": "R",
+      "valueType": "int",
+      "ifttt": [],
+      "allowedValues": [],
+      "maxValue": "100",
+      "minValue": "1",
+      "step": "1",
+      "dpId": 428,
+      "defaultValue": "70",
+      "unit": "-",
+      "observable": false,
+      "writeOnly": false,
+      "readOnly": true,
+      "paramValueType": 1
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.counter",
+    "properties": [
+     {
+      "identity": "CountDown",
+      "code": "CountDown",
+      "name": "\u5012\u8ba1\u65f6\u65f6\u95f411",
+      "description": "\u5012\u8ba1\u65f6\u65f6\u95f4\uff0c\u4e0d\u8d85\u8fc712H\uff0c\u5355\u4f4dS\u2014\u2014\u52ff\u5220",
+      "rwStatus": "RWU",
+      "valueType": "int",
+      "ifttt": [],
+      "allowedValues": [],
+      "maxValue": "43200",
+      "minValue": "0",
+      "step": "1",
+      "dpId": 51,
+      "defaultValue": "0",
+      "unit": "-",
+      "observable": true,
+      "writeOnly": true,
+      "readOnly": true,
+      "paramValueType": null
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.light.segmentValue",
+    "properties": [
+     {
+      "identity": "segmentValue",
+      "code": "segmentValue",
+      "name": "segmentValue",
+      "description": "\u706f\u7684\u5206\u6bb5\u6a21\u5f0f\u7684\u503c\uff08\u6570\u7ec4\uff09",
+      "rwStatus": "R",
+      "valueType": "int",
+      "ifttt": [],
+      "allowedValues": [],
+      "maxValue": "2139095040",
+      "minValue": "-2147450880",
+      "step": "1",
+      "dpId": 438,
+      "defaultValue": "-1",
+      "unit": "-",
+      "observable": false,
+      "writeOnly": false,
+      "readOnly": true,
+      "paramValueType": 1
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.light.rhythmDimming",
+    "properties": [
+     {
+      "identity": "rhythmDimming",
+      "code": "rhythmDimming",
+      "name": "rhythmDimming",
+      "description": "\u672c\u5730\u5f8b\u52a8\u7684\u4eae\u5ea6\u8bbe\u7f6e",
+      "rwStatus": "R",
+      "valueType": "int",
+      "ifttt": [],
+      "allowedValues": [],
+      "maxValue": "100",
+      "minValue": "1",
+      "step": "1",
+      "dpId": 435,
+      "defaultValue": "100",
+      "unit": "-",
+      "observable": false,
+      "writeOnly": false,
+      "readOnly": true,
+      "paramValueType": 1
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.light.effect.mode.fade",
+    "properties": [
+     {
+      "identity": "fading",
+      "code": "fading",
+      "name": "fading",
+      "description": "fading",
+      "rwStatus": "RWU",
+      "valueType": "int",
+      "ifttt": [],
+      "allowedValues": [],
+      "maxValue": "9999",
+      "minValue": "0",
+      "step": "1",
+      "dpId": 281,
+      "defaultValue": "0",
+      "unit": "-",
+      "observable": true,
+      "writeOnly": true,
+      "readOnly": true,
+      "paramValueType": null
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.light.rhythmSupport",
+    "properties": [
+     {
+      "identity": "rhythmSupport",
+      "code": "rhythmSupport",
+      "name": "rhythmSupport",
+      "description": "\u662f\u5426\u652f\u6301\u97f3\u4e50\u5f8b\u52a8",
+      "rwStatus": "R",
+      "valueType": "bool",
+      "ifttt": [],
+      "allowedValues": [
+       {
+        "name": "Disable",
+        "description": "",
+        "value": 0
+       },
+       {
+        "name": "Enable",
+        "description": "",
+        "value": 1
+       }
+      ],
+      "maxValue": "",
+      "minValue": "",
+      "step": null,
+      "dpId": 424,
+      "defaultValue": "1",
+      "unit": "-",
+      "observable": false,
+      "writeOnly": false,
+      "readOnly": true,
+      "paramValueType": 1
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.light.rhythmMicType",
+    "properties": [
+     {
+      "identity": "rhythmMicType",
+      "code": "rhythmMicType",
+      "name": "rhythmMicType",
+      "description": "MIC\u7684\u6765\u6e90",
+      "rwStatus": "R",
+      "valueType": "enum",
+      "ifttt": [],
+      "allowedValues": [
+       {
+        "name": "Phone Mic",
+        "description": "Phone Mic",
+        "value": 0
+       },
+       {
+        "name": "Device Mic",
+        "description": "",
+        "value": 1
+       }
+      ],
+      "maxValue": "",
+      "minValue": "",
+      "step": null,
+      "dpId": 427,
+      "defaultValue": "",
+      "unit": "-",
+      "observable": false,
+      "writeOnly": false,
+      "readOnly": true,
+      "paramValueType": 1
+     }
+    ],
+    "events": [],
+    "actions": []
+   },
+   {
+    "identity": "control.light.lightPointAdjust",
+    "properties": [
+     {
+      "identity": "lightPointAdjust",
+      "code": "lightPointAdjust",
+      "name": "lightPointAdjust",
+      "description": "tv\u706f\u7684\u706f\u5e26\u70b9\u6570\u8bbe\u7f6e\u5c5e\u6027",
+      "rwStatus": "R",
+      "valueType": "int",
+      "ifttt": [],
+      "allowedValues": [],
+      "maxValue": "12",
+      "minValue": "1",
+      "step": "1",
+      "dpId": 460,
+      "defaultValue": "12",
+      "unit": "-",
+      "observable": false,
+      "writeOnly": false,
+      "readOnly": true,
+      "paramValueType": 1
+     }
+    ],
+    "events": [],
+    "actions": []
+   }
+  ]
+ }
+}

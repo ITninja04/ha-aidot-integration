@@ -1,0 +1,24 @@
+[project]
+name = "ha-aidot-integration"
+version = "0.1.0"
+requires-python = ">=3.14.2"
+
+[dependency-groups]
+# Test-only. The plugin had no release for 2026.11 on 2026-11-23; its newest,
+# 0.13.375, pins homeassistant 2026.10.4. Forcing homeassistant 2026.11.2 under
+# it fails at import (httpx alias, a removed logger helper), so the suite runs
+# on 2026.10.4 and the integration avoids APIs added in 2026.11. The 2026.11.2
+# check is the live install on Ozzie's HA. Move this pin when a 2026.11 plugin
+# ships.
+dev = [
+  "pytest-homeassistant-custom-component==0.13.375",
+  "python-aidot==0.3.59",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+addopts = "-p no:cacheprovider"
+testpaths = ["tests"]
+
+[tool.uv]
+package = false

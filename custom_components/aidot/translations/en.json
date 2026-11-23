@@ -1,0 +1,75 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "This AiDot account is already configured.",
+      "reauth_successful": "Re-authentication was successful.",
+      "unique_id_mismatch": "The credentials belong to a different AiDot account. Please log in with the account that was originally set up."
+    },
+    "error": {
+      "cannot_connect": "Failed to connect.",
+      "invalid_auth": "Invalid username or password."
+    },
+    "step": {
+      "reauth_confirm": {
+        "data": {
+          "password": "Password"
+        },
+        "data_description": {
+          "password": "Password for logging in through AiDot app"
+        },
+        "description": "The AiDot login for {username} is no longer valid. Please enter your password to log in again."
+      },
+      "user": {
+        "data": {
+          "country_code": "Country",
+          "password": "Password",
+          "username": "Username"
+        },
+        "data_description": {
+          "country_code": "The country selected by AiDot app when logging in",
+          "password": "Password for logging in through AiDot app",
+          "username": "Account logged in through AiDot app"
+        }
+      }
+    }
+  },
+  "options": {
+    "abort": {
+      "no_devices": "No AiDot lights are loaded. Check that the integration is set up and the lights are online."
+    },
+    "step": {
+      "init": {
+        "title": "Light color controls",
+        "description": "Pick the light whose color controls are wrong. Lights you never change here keep what the AiDot cloud reports.",
+        "data": {
+          "device": "Light"
+        }
+      },
+      "color": {
+        "title": "What can this light do?",
+        "description": "Choose what the hardware really has. Saving reloads the integration, so all AiDot lights reconnect for a few seconds.",
+        "data": {
+          "color_profile": "Color controls"
+        }
+      }
+    }
+  },
+  "selector": {
+    "color_profile": {
+      "options": {
+        "auto": "Automatic (known model list, then AiDot cloud)",
+        "rgbcw": "Color plus tunable white (RGBCW)",
+        "rgbw": "Color plus one white channel (RGBW)",
+        "rgb_cct": "Color and tunable white, not mixed (RGB + CCT)",
+        "rgb": "Color only (RGB)",
+        "cct": "Tunable white only",
+        "dimmable": "Brightness only"
+      }
+    }
+  },
+  "exceptions": {
+    "invalid_auth": {
+      "message": "Invalid username or password."
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "domain": "aidot",
+  "name": "AiDot (color fix)",
+  "codeowners": ["@ITninja04"],
+  "config_flow": true,
+  "dhcp": [
+    {
+      "hostname": "aidot"
+    }
+  ],
+  "documentation": "https://github.com/ITninja04/ha-aidot-integration",
+  "integration_type": "hub",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/ITninja04/ha-aidot-integration/issues",
+  "requirements": ["python-aidot==0.3.59"],
+  "version": "0.1.0"
+}
