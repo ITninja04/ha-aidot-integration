@@ -19,6 +19,7 @@ dev = [
 asyncio_mode = "auto"
 addopts = "-p no:cacheprovider"
 testpaths = ["tests"]
+pythonpath = ["."]
 
 [tool.uv]
 package = false

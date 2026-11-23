@@ -6,12 +6,23 @@ async_unload_platforms returning a bool) so it loads on 2026.10 as well.
 Both forms are accepted by 2026.11.2.
 """
 
+import logging
+
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
 
 from .coordinator import AidotConfigEntry, AidotDeviceManagerCoordinator
 
 PLATFORMS: list[Platform] = [Platform.LIGHT]
+
+# python-aidot 0.3.59 logs its protocol traffic at WARNING, and those lines
+# include each light's local login password (getDevAttrReq payloads) and
+# every discovery broadcast. Seen in Ozzie's HA system log on 2026-11-23.
+# Filtering only the password would still leave the log flooded, so the
+# library is held to ERROR. Its real failures still show. To see the traffic
+# when debugging, raise it again with the logger.set_level action
+# (aidot: debug); that call wins because it runs after this import.
+logging.getLogger("aidot").setLevel(logging.ERROR)
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: AidotConfigEntry) -> bool:

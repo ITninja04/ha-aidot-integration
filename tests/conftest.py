@@ -26,6 +26,12 @@ from homeassistant.core import HomeAssistant
 
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
+# Imported at collection time on purpose. The test plugin ships its own
+# custom_components package and imports it during setup; whichever package
+# is imported first owns the name for the whole run. Importing ours here
+# makes that deterministic, so a single test file runs the same as the suite.
+import custom_components.aidot.coordinator as coordinator
+
 DOMAIN = "aidot"
 
 STRIP_ID = "strip-a001818"
@@ -112,7 +118,7 @@ def fake_cloud() -> type[FakeAidotClient]:
 
     FakeAidotClient.devices = [STRIP_DEVICE, BULB_DEVICE]
     FakeAidotClient.device_clients = {}
-    with patch("custom_components.aidot.coordinator.AidotClient", FakeAidotClient):
+    with patch.object(coordinator, "AidotClient", FakeAidotClient):
         yield FakeAidotClient
 
 
